@@ -1,0 +1,90 @@
+/* General styling for the entire webpage */
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background */
+  }
+  
+  /* Styling for the header section */
+  .header {
+      text-align: center;
+      margin-top: 2rem;
+      color: #5c5a5a; /* Gray text color */
+      line-height: 1;
+  }
+  
+  .header h1 {
+      color: #000000; /* Black color for h1 in header */
+  }
+  
+  /* Styling for the card container */
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Styling for individual cards */
+  .card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: 30px;
+    overflow: hidden;
+    background-color: #fff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.3s;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Scale-up effect on hover */
+    cursor: pointer;
+  }
+  
+  /* Styling for card images */
+  .card img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    transform: scale(1.2); /* Apply zoom-out effect on hover */
+    transition: transform 0.3s; /* Add transition for the zoom-out effect */
+  }
+  
+  .card:hover img {
+    transform: scale(1); /* Apply zoom-out effect on hover */
+  }
+  
+  /* Styling for the card text overlay */
+  .card-text {
+    padding: 20px;
+    text-align: center;
+    opacity: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 1)
+    ); /* Gradient overlay */
+    transition: opacity 0.3s;
+  }
+  
+  .card-text p {
+      color: #4b4b4b; /* Dark gray text color */
+      font-size: 0.8rem;
+      font-weight: 600;
+  }
+  
+  .card-text h3 {
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.9rem;
+  }
+  
+  .card:hover .card-text h3 {
+    opacity: 1; /* Make heading visible on hover */
+  }
+  
